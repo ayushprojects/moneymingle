@@ -9,17 +9,17 @@ function Navbar1() {
         <Container className="navigation">
           <Navbar.Brand href="/">Money Mingle</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link className="link" href="/SipCalculator">
+            <Nav.Link className="link" to="/SipCalculator">
               SipCalculator
             </Nav.Link>
-            <Nav.Link className="link" href="/LumpSum">
+            <Nav.Link className="link" to="/LumpSum">
               LumpSum
             </Nav.Link>
 
-            <Nav.Link className="link" href="/EmiCalculator">
+            <Nav.Link className="link" to="/EmiCalculator">
               EmiCalculator
             </Nav.Link>
-            <Nav.Link className="link" href="/IncomeTax">
+            <Nav.Link className="link" to="/IncomeTax">
               IncomeTax
             </Nav.Link>
           </Nav>
