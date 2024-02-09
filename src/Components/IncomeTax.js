@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/tax.css";
 import Navbar from "./Navbar";
-
+import { TextField } from "@mui/material";
 export default function IncomeTax() {
   const Income = {
     salary: "",
@@ -155,124 +155,156 @@ export default function IncomeTax() {
   return (
     <>
       <Navbar />
-      <div className="main-contaier">
+      <div className="itx">
         <h1>Income Tax Calculator 2023-2024</h1>
-        {/* Income  */}
-        <div className="Income">
-          <h5>Income</h5>
-          Gross Salary
-          <input
-            type="number"
-            name="salary"
-            value={incomeInput.salary}
-            onChange={handleIncome}
-          />
-          <br />
-          Annual income from other sources
-          <input
-            type="number"
-            name="others"
-            value={incomeInput.others}
-            onChange={handleIncome}
-          />
-          <br />
-          Annual income from interest
-          <input
-            type="number"
-            name="interest"
-            value={incomeInput.interest}
-            onChange={handleIncome}
-          />
-          <br />
-          Annual income from house property (rental income)
-          <input
-            type="number"
-            name="rentalIncome"
-            value={incomeInput.rentalIncome}
-            onChange={handleIncome}
-          />
-        </div>
-        <br />
-        {/* Deduction  */}
-        <div className="Deductions">
-          <h5>Deductions</h5>
-          Basic deduction u/s 80C
-          <input
-            type="number"
-            name="basicDeduction"
-            value={DeductionInput.basicDeduction}
-            onChange={handleDeduction}
-          />
-          <br />
-          Contribution to NPS u/s 80CCD(1B){" "}
-          <input
-            type="number"
-            name="NPS"
-            value={DeductionInput.NPS}
-            onChange={handleDeduction}
-          />
-          <br />
-          Medical insurance premium u/s 80D{" "}
-          <input
-            type="number"
-            name="medicalInsurance"
-            value={DeductionInput.medicalInsurance}
-            onChange={handleDeduction}
-          />
-          <br />
-          Donation to Charity u/s 80G{" "}
-          <input
-            type="number"
-            name="charity"
-            value={DeductionInput.charity}
-            onChange={handleDeduction}
-          />
-          <br />
-          Interest on educational loan u/s 80E{" "}
-          <input
-            type="number"
-            name="educationLoan"
-            value={DeductionInput.educationLoan}
-            onChange={handleDeduction}
-          />
-          <br />
-          Interest on deposits in saving account u/s 80TTA/TTB{" "}
-          <input
-            type="number"
-            name="savingDeposits"
-            value={DeductionInput.savingDeposits}
-            onChange={handleDeduction}
-          />
-        </div>
-        <br />
+        <div className="main-contaier container">
+          {/* Income  */}
+          <div className="Income">
+            <h5>Income</h5>
+            <TextField
+              id="outlined-basic"
+              label="  Gross Salary"
+              variant="outlined"
+              type="number"
+              name="salary"
+              value={incomeInput.salary}
+              onChange={handleIncome}
+            />
+            <br />
+            <TextField
+              id="outlined-basic"
+              label=" Annual income from other sources"
+              variant="outlined"
+              type="number"
+              name="others"
+              value={incomeInput.others}
+              onChange={handleIncome}
+            />
+            <br />
+            <TextField
+              id="outlined-basic"
+              label="  Annual income from interest"
+              variant="outlined"
+              type="number"
+              name="interest"
+              value={incomeInput.interest}
+              onChange={handleIncome}
+            />
+            <br />
 
-        <div className="HRA">
-          <h5>HRA Exemption</h5>
-          Basic Salary
-          <input
-            type="number"
-            name="salaryPerAnnum"
-            value={HRAexempt.salaryPerAnnum}
-            onChange={handleHRA}
-          />
+            <TextField
+              id="outlined-basic"
+              label="Annual income from house property (rental income)"
+              variant="outlined"
+              type="number"
+              name="rentalIncome"
+              value={incomeInput.rentalIncome}
+              onChange={handleIncome}
+            />
+          </div>
           <br />
-          HRA Received
-          <input
-            type="number"
-            name="HRAreceived"
-            value={HRAexempt.HRAreceived}
-            onChange={handleHRA}
-          />
+          {/* Deduction  */}
+          <div className="Deductions">
+            <h5>Deductions</h5>
+            <TextField
+              id="outlined-basic"
+              label="   Basic deduction u/s 80C"
+              variant="outlined"
+              type="number"
+              name="basicDeduction"
+              value={DeductionInput.basicDeduction}
+              onChange={handleDeduction}
+            />
+            <br />
+            <TextField
+              id="outlined-basic"
+              label=" Contribution to NPS u/s 80CCD(1B)"
+              variant="outlined"
+              type="number"
+              name="NPS"
+              value={DeductionInput.NPS}
+              onChange={handleDeduction}
+            />
+            <br />{" "}
+            <TextField
+              id="outlined-basic"
+              label="Medical insurance premium u/s 80D"
+              variant="outlined"
+              type="number"
+              name="medicalInsurance"
+              value={DeductionInput.medicalInsurance}
+              onChange={handleDeduction}
+            />
+            <br />{" "}
+            <TextField
+              id="outlined-basic"
+              label="Donation to Charity u/s 80G"
+              variant="outlined"
+              type="number"
+              name="charity"
+              value={DeductionInput.charity}
+              onChange={handleDeduction}
+            />
+            <br />{" "}
+            <TextField
+              id="outlined-basic"
+              label="Interest on educational loan u/s 80E"
+              variant="outlined"
+              type="number"
+              name="educationLoan"
+              value={DeductionInput.educationLoan}
+              onChange={handleDeduction}
+            />
+            <br />{" "}
+            <TextField
+              id="outlined-basic"
+              label=" Interest on deposits in saving account u/s 80TTA/TTB"
+              variant="outlined"
+              type="number"
+              name="savingDeposits"
+              value={DeductionInput.savingDeposits}
+              onChange={handleDeduction}
+            />
+          </div>
           <br />
-          Total Rent Paid
-          <input
-            type="number"
-            name="totalRentPaid"
-            value={HRAexempt.totalRentPaid}
-            onChange={handleHRA}
-          />
+
+          <div className="HRA">
+            <h5>HRA Exemption</h5>
+            <TextField
+              id="outlined-basic"
+              label=" Basic Salary"
+              variant="outlined"
+              type="number"
+              name="salaryPerAnnum"
+              value={HRAexempt.salaryPerAnnum}
+              onChange={handleHRA}
+            />
+            <br />
+            <TextField
+              id="outlined-basic"
+              label="  HRA Received"
+              variant="outlined"
+              type="number"
+              name="HRAreceived"
+              value={HRAexempt.HRAreceived}
+              onChange={handleHRA}
+            />
+            <br />
+
+            <TextField
+              id="outlined-basic"
+              label="  Total Rent Paid"
+              variant="outlined"
+              type="number"
+              name="totalRentPaid"
+              value={HRAexempt.totalRentPaid}
+              onChange={handleHRA}
+            />
+          </div>
         </div>
-        <button onClick={(e) => CalculateTax(e)}>CalculateTax</button>
+        <button style={{ marginTop: 20 }} onClick={(e) => CalculateTax(e)}>
+          CalculateTax
+        </button>
       </div>
 
       <div className="op">

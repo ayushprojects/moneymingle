@@ -69,7 +69,6 @@ function Home() {
         </div>
       </div>
       <div className="content"></div>
-      <Footer />
     </>
   );
 }
