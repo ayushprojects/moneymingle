@@ -1,0 +1,25 @@
+.main-contaier {
+  margin: auto;
+  border: 4px solid #6499e9;
+  border-radius: 5px;
+  background-color: #a6f6ff;
+  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+input {
+  margin-left: 30px;
+  padding: 4px;
+  border-radius: 10px;
+  border-radius: 1px solid #6499e9;
+  text-align: center;
+  background-color: #6499e9;
+
+  font-weight: 800;
+}
+.op {
+  margin: auto;
+  width: max-content;
+}
