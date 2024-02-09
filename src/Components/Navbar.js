@@ -7,7 +7,7 @@ function Navbar1() {
     <>
       <Navbar className=" bar">
         <Container className="navigation">
-          <Navbar.Brand href="/">financial App</Navbar.Brand>
+          <Navbar.Brand href="/">Money Mingle</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link className="link" href="/SipCalculator">
               SipCalculator
